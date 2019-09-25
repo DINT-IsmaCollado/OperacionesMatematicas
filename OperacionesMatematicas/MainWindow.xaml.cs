@@ -27,35 +27,20 @@ namespace OperacionesMatematicas
             InitializeComponent();
         }
 
-        private void Operando1_TextChanged(object sender, TextChangedEventArgs e)
+        // Calculos por si cambia los operadores
+        private void Operando_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int operando1 = Convert.ToInt32(Operando1.Text);
-            int operando2 = Convert.ToInt32(Operando2.Text);
             if (RadioSuma.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 + operando2);
+                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) + Convert.ToInt32(Operando2.Text));
             if (RadioResta.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 - operando2);
+                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) - Convert.ToInt32(Operando2.Text));
             if (RadioMultiplicacion.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 * operando2);
+                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) * Convert.ToInt32(Operando2.Text));
             if (RadioDivision.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 / operando2);
-
+                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) / Convert.ToInt32(Operando2.Text));
         }
 
-        private void Operando2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            int operando1 = Convert.ToInt32(Operando1.Text);
-            int operando2 = Convert.ToInt32(Operando2.Text);
-            if (RadioSuma.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 + operando2);
-            if (RadioResta.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 - operando2);
-            if (RadioMultiplicacion.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 * operando2);
-            if (RadioDivision.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(operando1 / operando2);
-        }
-
+        // Calculos por si cambia las operacioens
         private void RadioSuma_Checked(object sender, RoutedEventArgs e)
         {
             int operando1 = Convert.ToInt32(Operando1.Text);
