@@ -25,10 +25,11 @@ namespace OperacionesMatematicas
         public MainWindow()
         {
             InitializeComponent();
+            RadioSuma.IsChecked = true;
         }
 
         // Calculos por si cambia los operadores
-        private void Operando_TextChanged(object sender, TextChangedEventArgs e)
+        private void OperandoTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (RadioSuma.IsChecked == true)
                 ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) + Convert.ToInt32(Operando2.Text));
@@ -41,28 +42,28 @@ namespace OperacionesMatematicas
         }
 
         // Calculos por si cambia las operacioens
-        private void RadioSuma_Checked(object sender, RoutedEventArgs e)
+        private void SumaRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             int operando1 = Convert.ToInt32(Operando1.Text);
             int operando2 = Convert.ToInt32(Operando2.Text);
             ResultadoOperando.Text = Convert.ToString(operando1 + operando2);
         }
 
-        private void RadioResta_Checked(object sender, RoutedEventArgs e)
+        private void RestaRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             int operando1 = Convert.ToInt32(Operando1.Text);
             int operando2 = Convert.ToInt32(Operando2.Text);
             ResultadoOperando.Text = Convert.ToString(operando1 - operando2);
         }
 
-        private void RadioMultiplicacion_Checked(object sender, RoutedEventArgs e)
+        private void MultiplicacionRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             int operando1 = Convert.ToInt32(Operando1.Text);
             int operando2 = Convert.ToInt32(Operando2.Text);
             ResultadoOperando.Text = Convert.ToString(operando1 * operando2);
         }
 
-        private void RadioDivision_Checked(object sender, RoutedEventArgs e)
+        private void DivisionRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             int operando1 = Convert.ToInt32(Operando1.Text);
             int operando2 = Convert.ToInt32(Operando2.Text);

@@ -14,14 +14,14 @@
             <ColumnDefinition Width="557*"/>
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="Operaciones" Header="Operaciones" HorizontalAlignment="Left" Height="145" Margin="19,159,0,0" VerticalAlignment="Top" Width="157" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="RadioSuma" Content="Suma" HorizontalAlignment="Left" Margin="36,192,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="RadioSuma_Checked"/>
-        <RadioButton x:Name="RadioResta" Content="Resta" HorizontalAlignment="Left" Margin="36,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.043,0.8" Grid.Column="1" Grid.ColumnSpan="2" Checked="RadioResta_Checked"/>
-        <RadioButton x:Name="RadioMultiplicacion" Content="Multiplicación" HorizontalAlignment="Left" Margin="36,237,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="RadioMultiplicacion_Checked"/>
-        <RadioButton x:Name="RadioDivision" Content="División" HorizontalAlignment="Left" Margin="36,260,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="RadioDivision_Checked"/>
+        <RadioButton x:Name="RadioSuma" Content="Suma" HorizontalAlignment="Left" Margin="36,192,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="SumaRadioButton_Checked"/>
+        <RadioButton x:Name="RadioResta" Content="Resta" HorizontalAlignment="Left" Margin="36,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.043,0.8" Grid.Column="1" Grid.ColumnSpan="2" Checked="RestaRadioButton_Checked"/>
+        <RadioButton x:Name="RadioMultiplicacion" Content="Multiplicación" HorizontalAlignment="Left" Margin="36,237,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="MultiplicacionRadioButton_Checked"/>
+        <RadioButton x:Name="RadioDivision" Content="División" HorizontalAlignment="Left" Margin="36,260,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Checked="DivisionRadioButton_Checked"/>
         <TextBlock HorizontalAlignment="Left" Margin="29,173,0,0" TextWrapping="Wrap" Text="Operando 1" VerticalAlignment="Top" Grid.Column="3"/>
         <TextBlock HorizontalAlignment="Left" Margin="29,236,0,0" TextWrapping="Wrap" Text="Operando 2" VerticalAlignment="Top" RenderTransformOrigin="0.508,3.375" Grid.Column="3"/>
-        <TextBox x:Name="Operando1" Height="23" Margin="29,192,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" FlowDirection="RightToLeft" Grid.Column="3" TextChanged="Operando_TextChanged"/>
-        <TextBox x:Name="Operando2" Height="23" Margin="29,258,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" FlowDirection="RightToLeft" Grid.Column="3" TextChanged="Operando_TextChanged"/>
+        <TextBox x:Name="Operando1" Height="23" Margin="29,192,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" FlowDirection="RightToLeft" Grid.Column="3" TextChanged="OperandoTextBox_TextChanged"/>
+        <TextBox x:Name="Operando2" Height="23" Margin="29,258,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" FlowDirection="RightToLeft" Grid.Column="3" TextChanged="OperandoTextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="348,215,0,0" TextWrapping="Wrap" Text="Resultado" VerticalAlignment="Top" Grid.Column="3"/>
         <TextBox x:Name="ResultadoOperando" HorizontalAlignment="Left" Height="23" Margin="348,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0" FlowDirection="RightToLeft" Grid.Column="3"/>
         <Button Content="Limpiar" HorizontalAlignment="Left" Margin="5,346,0,0" VerticalAlignment="Top" Width="92" Height="23" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
