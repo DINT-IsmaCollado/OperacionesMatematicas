@@ -31,14 +31,22 @@ namespace OperacionesMatematicas
         // Calculos por si cambia los operadores
         private void OperandoTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (RadioSuma.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) + Convert.ToInt32(Operando2.Text));
-            if (RadioResta.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) - Convert.ToInt32(Operando2.Text));
-            if (RadioMultiplicacion.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) * Convert.ToInt32(Operando2.Text));
-            if (RadioDivision.IsChecked == true)
-                ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) / Convert.ToInt32(Operando2.Text));
+            if (Operando1.Text.Length <= 0 || Operando2.Text.Length <= 0 || Operando1.Text == " " || Operando2.Text == " ")
+            {
+                Operando1.Text = "ERROR";
+                Operando2.Text = "ERROR";
+            }
+            else
+            {
+                if (RadioSuma.IsChecked == true)
+                    ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) + Convert.ToInt32(Operando2.Text));
+                if (RadioResta.IsChecked == true)
+                    ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) - Convert.ToInt32(Operando2.Text));
+                if (RadioMultiplicacion.IsChecked == true)
+                    ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) * Convert.ToInt32(Operando2.Text));
+                if (RadioDivision.IsChecked == true)
+                    ResultadoOperando.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) / Convert.ToInt32(Operando2.Text));
+            }
         }
 
         // Calculos por si cambia las operacioens
